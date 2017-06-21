@@ -1,9 +1,11 @@
 <Page
+    class="page"
     navigatingTo="onNavigatingTo"  
     xmlns:nsDrawer="nativescript-telerik-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
     xmlns="http://www.nativescript.org/tns.xsd">
 
+    <!--Add your page content here-->
     <ActionBar title="Home">
         <ActionItem android.systemIcon="ic_menu_account_list" tap="onDrawerButtonTap" />
     </ActionBar>
@@ -15,6 +17,16 @@
     The RadSideDrawer component is designed to be used as a root element to the <Page> and
     it shouldn't have any other siblings other than the <ActionBar> component.
     -->
+    <ActionBar class="action-bar">
+        <NavigationButton visibility="collapsed"></NavigationButton>
+        <ActionItem tap="onDrawerButtonTap"
+            ios.position="left"
+            android.position="actionBar">
+            <Label text="&#xf0c9;" class="fa p-r-15"></Label>
+        </ActionItem>
+        <Label class="action-bar-title" text="Home"></Label>
+    </ActionBar>
+
     <nsDrawer:RadSideDrawer id="sideDrawer" showOverNavigation="true">
         <!--
         Use the RadSideDrawer.drawerTransition component to change the open/close animation of the drawer.
@@ -44,8 +56,7 @@
         Always wrap content in a layout component.
         -->
         <nsDrawer:RadSideDrawer.mainContent>
-            <StackLayout>
-                <Label text="Home Page"/>
+            <StackLayout class="appPage homePage">
             </StackLayout>
         </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer>
