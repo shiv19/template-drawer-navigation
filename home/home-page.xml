@@ -6,10 +6,6 @@
     xmlns="http://www.nativescript.org/tns.xsd">
 
     <!--Add your page content here-->
-    <ActionBar title="Home">
-        <ActionItem android.systemIcon="ic_menu_account_list" tap="onDrawerButtonTap" />
-    </ActionBar>
-
     <!--
     RadSideDrawer is a UI component part of the Progress NativeScript UI set of components.
     Learn more about the RadSideDrawer UI component and how it can be customized in this documentation article:
@@ -22,7 +18,7 @@
         <ActionItem tap="onDrawerButtonTap"
             ios.position="left"
             android.position="actionBar">
-            <Label text="&#xf0c9;" class="fa p-r-15"></Label>
+            <Label text="&#xf0c9;" class="fa"></Label>
         </ActionItem>
         <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
