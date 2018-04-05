@@ -16,7 +16,8 @@
     "appbuilder",
     "template",
     "drawer",
-    "navigation"
+    "navigation",
+    "category-general"
   ],
   "repository": {
     "type": "git",
